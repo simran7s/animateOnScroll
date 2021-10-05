@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: #efedd6;
     font-family: 'Roboto', sans-serif;
     margin: 0%;
     /* For centering everything */
@@ -12,7 +13,37 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    /* Hide Scrollbars */
-    overflow: hidden;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.box {
+    background-color: steelblue;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #333, -3px -3px 10px #aaa;
+    transform: translateX(100vw);
+    transition: transform 0.4s ease;
+}
+
+/* Move all even boxes to left side */
+.box:nth-of-type(even) {
+    transform: translateX(-100vw);
+}
+
+
+.box.show {
+    transform: translateX(0);
+}
+
+.box h2 {
+    font-size: 45px;
 }
